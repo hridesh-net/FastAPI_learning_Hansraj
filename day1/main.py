@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+# step 1: create FastAPI app instance
 app = FastAPI()
 
 class Student(BaseModel):
@@ -8,11 +9,16 @@ class Student(BaseModel):
     age: int
     course: str
 
-@app.get("/")
+
+# Step 2: define endpoints
+@app.get("/") # Decorator to define a GET endpoint (works on the concept of Abstraction in OOPs paradigm)
 def hello_folks():
+    """takes noting but returns a message "Hello, Folks! from FastAPI
+    """
+    
     return {"message": "Hello, folks! from FastAPI"}
 
-@app.post("/student")
+@app.post("/student") # Decorator to define a POST endpoint
 def create_student(data: Student):
     return {
         "message": "Student created successfully",
@@ -27,7 +33,8 @@ USERS = {
 
 
 @app.get("/user/{user_id}") # user_id is a path parameter
-def get_user(user_id: str):
+def get_user(user_id: str): # use the same name as in the path parameter
+    
     user = USERS.get(user_id) # user_id is not there in USERS then this will return None
     """ USERS[user_id] -> KeyError if user_id not found"""
     if user:
