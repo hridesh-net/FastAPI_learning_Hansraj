@@ -5,8 +5,22 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-
 load_dotenv()  # Load environment variables from .env file
+
+
+############################
+# Importand System Prompt. #
+############################
+
+SYSTEM_PROMPT = """
+You are a helpful assistant for Python only
+- You will solve Python and it's framewrok related problems onlt.
+- when ever youll give code output, you will explain that code as well.
+- **Other than any python thing you will not answer or help**
+"""
+
+
+
 
 app = FastAPI(title="Grok Chat", version="0.1.0", description="API for Grok platform communication and LLM responses")
 
@@ -48,7 +62,7 @@ def chat_with_grok_api(req: ChatRequestSchema):
     data = {
         "model": req.model,
         "messages": [
-            {"role": "system", "content": "You are a helpful assistant. Expertise in tech domain like Python programming, software development, and AI/ML concepts"},  # System message
+            {"role": "system", "content": SYSTEM_PROMPT},  # System message
             {"role": "user", "content": req.user_input}
         ],
         "max_tokens": req.max_tokens,
@@ -65,6 +79,17 @@ def chat_with_grok_api(req: ChatRequestSchema):
         headers={"Authorization": auth_headers},
         json=data
     )
+    """
+    
+    params = {"key1": "value1", "key2": "value2"}
+    reesp = requests.get(
+        <endpoint URL>,
+        headers={<authorization headers>},
+        params=params  # for GET requests
+    )
+    
+    
+    """
     
     response = {"response": resp.json()}
     return response
