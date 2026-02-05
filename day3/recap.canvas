@@ -1,0 +1,916 @@
+{
+  "document": {
+    "store": {
+      "document:document": {
+        "gridSize": 10,
+        "name": "",
+        "meta": {},
+        "id": "document:document",
+        "typeName": "document"
+      },
+      "page:page": {
+        "meta": {},
+        "id": "page:page",
+        "name": "Page 1",
+        "index": "a1",
+        "typeName": "page"
+      },
+      "shape:9GxevSmUlIxNbv-bmjvrP": {
+        "x": 213.71875,
+        "y": 80.375,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:9GxevSmUlIxNbv-bmjvrP",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 596.6304830919997,
+          "text": "- FastAPI -> API Engine | Helps you to create and manage APIs\n- API -> Application Programing Interface | To communicate between 2 differe applications\n\nOperations -> Create, Read, Update, Delete (CRUD Operations)\n\n- API -> REST type (Protocal) | http protocal",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": false,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a1",
+        "typeName": "shape"
+      },
+      "shape:kSaYUDH-F7wTV_2a6PX-n": {
+        "x": 209.38954317284345,
+        "y": 263.24805699598585,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:kSaYUDH-F7wTV_2a6PX-n",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 527.703125,
+          "text": "C -> Create | always use POST protocal to create data\nR -> Read | always use GET Protocal to read data\nU -> Update | always use PUT/PATCH to update data\nD -> Delete | always use DELETE protocal to delete data",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a2",
+        "typeName": "shape"
+      },
+      "shape:sCzProdvTDjs-ZfWp137p": {
+        "x": 837.8937846866895,
+        "y": 359.06199777574363,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:sCzProdvTDjs-ZfWp137p",
+        "type": "arrow",
+        "props": {
+          "dash": "draw",
+          "size": "s",
+          "fill": "none",
+          "color": "black",
+          "labelColor": "black",
+          "bend": 0,
+          "start": {
+            "x": -237.3166828239522,
+            "y": -11.090491968771346
+          },
+          "end": {
+            "x": 53.77725166802418,
+            "y": -76.97566684804693
+          },
+          "arrowheadStart": "none",
+          "arrowheadEnd": "arrow",
+          "text": "",
+          "labelPosition": 0.5,
+          "font": "draw",
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a3",
+        "typeName": "shape"
+      },
+      "binding:O5g01HG23FhoGZhxyMfbw": {
+        "meta": {},
+        "id": "binding:O5g01HG23FhoGZhxyMfbw",
+        "type": "arrow",
+        "fromId": "shape:sCzProdvTDjs-ZfWp137p",
+        "toId": "shape:kSaYUDH-F7wTV_2a6PX-n",
+        "props": {
+          "isPrecise": true,
+          "isExact": false,
+          "normalizedAnchor": {
+            "x": 0.741302334887431,
+            "y": 0.871752527958703
+          },
+          "terminal": "start"
+        },
+        "typeName": "binding"
+      },
+      "shape:EgODQNSeQqwbi-lGrFGj1": {
+        "x": 921.6542024755079,
+        "y": 261.8996163845059,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:EgODQNSeQqwbi-lGrFGj1",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 354.6193031515438,
+          "text": "PUT | PATCH\nPUT -> we have to update entire data each time\nPATCH -> PArtial update or just patch a new data",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": false,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a4",
+        "typeName": "shape"
+      },
+      "shape:3hI-TjrQDXBDIiVRAlER9": {
+        "x": 192.4950631982445,
+        "y": 723.3441647098855,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:3hI-TjrQDXBDIiVRAlER9",
+        "type": "code",
+        "props": {
+          "w": 400,
+          "h": 189.9803750229455,
+          "text": "# main.py\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\nprint(\"server started\")",
+          "language": "python",
+          "output": "server started\n"
+        },
+        "parentId": "page:page",
+        "index": "a6",
+        "typeName": "shape"
+      },
+      "shape:PhX6L0YDy28bh5EV0GwhG": {
+        "x": 194.80986695949127,
+        "y": 395.6794110753492,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:PhX6L0YDy28bh5EV0GwhG",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 708.78125,
+          "text": "Step 1: we create Virtual ENviroment\npython -m venv <name of virtual env>\n\nStep 2: activate virtual env\non windows powershell -> ./<name_of_venv>/Scripts/Activate.ps1\nif you are on bash/gitbash/linux OS -> source <name_of_venv>/bin/activate\n\nstep 3: install packages \npip install \"fastapi[standard]\" uvicorn\n(if requirements.txt file exists)\npip install -r requirements.txt",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a7",
+        "typeName": "shape"
+      },
+      "shape:8IeCxQa2v2jv-s18KX8pI": {
+        "x": 191.80128803231042,
+        "y": 690.2120345520176,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:8IeCxQa2v2jv-s18KX8pI",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 420.890625,
+          "text": "step 4: Creating app in main.py in root folder",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a8",
+        "typeName": "shape"
+      },
+      "shape:AQhixcpX350rMTYOr-pB8": {
+        "x": 184.752281910065,
+        "y": 934.6250077049731,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:AQhixcpX350rMTYOr-pB8",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 326.765625,
+          "text": "step 5: Creating apis (get/post/put)",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a9",
+        "typeName": "shape"
+      },
+      "shape:BAyzgMYjNE2YhbWdx1r--": {
+        "x": 187.15034556245723,
+        "y": 970.1114366008663,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:BAyzgMYjNE2YhbWdx1r--",
+        "type": "code",
+        "props": {
+          "w": 513.7085935258722,
+          "h": 211.7261150527795,
+          "text": "@app.get(\"/home\")\ndef home_app():\n  return {\"message\": \"hello from test application\"}\n\n@app.post(\"student\")\ndef student_create_dummy():\n  return {\"message\": \"this is a post api\"}",
+          "language": "python",
+          "output": ""
+        },
+        "parentId": "page:page",
+        "index": "aA",
+        "typeName": "shape"
+      },
+      "shape:Q-M7s4OHa-_KXeYB6ebpE": {
+        "x": 193.04690973694508,
+        "y": 1183.1818517889922,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:Q-M7s4OHa-_KXeYB6ebpE",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 205.25,
+          "text": "step 6: taking params",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aB",
+        "typeName": "shape"
+      },
+      "shape:YdFnHdQJfw9vfmhs6Cy1w": {
+        "x": 195.695414614042,
+        "y": 1207.319081306547,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:YdFnHdQJfw9vfmhs6Cy1w",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 476.3671875,
+          "text": "Query param or Path params\n\nquery params -> /student?key=value&key2=value2\npath params -> /student/{dunamic_value}",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aC",
+        "typeName": "shape"
+      },
+      "shape:P3OgNXpRapm-kpZA2W4ZQ": {
+        "x": 438.0768601704408,
+        "y": 1307.8526162447185,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:P3OgNXpRapm-kpZA2W4ZQ",
+        "type": "draw",
+        "props": {
+          "segments": [
+            {
+              "type": "free",
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 0.56,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 2.87,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 11.23,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 27.71,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 48.15,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 69.66,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 91.28,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 111.62,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 145.26,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 156.42,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 165.77,
+                  "y": 0.18,
+                  "z": 0.5
+                },
+                {
+                  "x": 172.33,
+                  "y": 0.84,
+                  "z": 0.5
+                },
+                {
+                  "x": 176.93,
+                  "y": 1.61,
+                  "z": 0.5
+                },
+                {
+                  "x": 179.73,
+                  "y": 2.11,
+                  "z": 0.5
+                },
+                {
+                  "x": 181.05,
+                  "y": 2.46,
+                  "z": 0.5
+                },
+                {
+                  "x": 181.83,
+                  "y": 2.61,
+                  "z": 0.5
+                },
+                {
+                  "x": 181.98,
+                  "y": 2.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 181.78,
+                  "y": 2.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 181.46,
+                  "y": 2.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 180.77,
+                  "y": 2.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 179.45,
+                  "y": 2.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 177.85,
+                  "y": 2.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 176.35,
+                  "y": 2.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 175.36,
+                  "y": 2.62,
+                  "z": 0.5
+                }
+              ]
+            }
+          ],
+          "color": "blue",
+          "fill": "none",
+          "dash": "draw",
+          "size": "s",
+          "isComplete": true,
+          "isClosed": false,
+          "isPen": false,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aD",
+        "typeName": "shape"
+      },
+      "shape:ghIhfCrC8Qlvd8cQAFUWJ": {
+        "x": 503.13204839574064,
+        "y": 1318.3642561301792,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:ghIhfCrC8Qlvd8cQAFUWJ",
+        "type": "draw",
+        "props": {
+          "segments": [
+            {
+              "type": "free",
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 0.35,
+                  "y": 0.12,
+                  "z": 0.5
+                },
+                {
+                  "x": 2.08,
+                  "y": 1.4,
+                  "z": 0.5
+                },
+                {
+                  "x": 7.03,
+                  "y": 4.52,
+                  "z": 0.5
+                },
+                {
+                  "x": 15.11,
+                  "y": 8.4,
+                  "z": 0.5
+                },
+                {
+                  "x": 33.53,
+                  "y": 13.35,
+                  "z": 0.5
+                },
+                {
+                  "x": 42.58,
+                  "y": 13.97,
+                  "z": 0.5
+                },
+                {
+                  "x": 51.04,
+                  "y": 13.97,
+                  "z": 0.5
+                },
+                {
+                  "x": 59.52,
+                  "y": 13.97,
+                  "z": 0.5
+                },
+                {
+                  "x": 66.92,
+                  "y": 13.97,
+                  "z": 0.5
+                },
+                {
+                  "x": 74.17,
+                  "y": 13.97,
+                  "z": 0.5
+                },
+                {
+                  "x": 81.9,
+                  "y": 13.97,
+                  "z": 0.5
+                },
+                {
+                  "x": 91.33,
+                  "y": 13.97,
+                  "z": 0.5
+                },
+                {
+                  "x": 94.96,
+                  "y": 13.72,
+                  "z": 0.5
+                },
+                {
+                  "x": 97.2,
+                  "y": 13.32,
+                  "z": 0.5
+                },
+                {
+                  "x": 98.38,
+                  "y": 13.02,
+                  "z": 0.5
+                },
+                {
+                  "x": 99.11,
+                  "y": 12.83,
+                  "z": 0.5
+                }
+              ]
+            }
+          ],
+          "color": "blue",
+          "fill": "none",
+          "dash": "draw",
+          "size": "s",
+          "isComplete": true,
+          "isClosed": false,
+          "isPen": false,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aE",
+        "typeName": "shape"
+      },
+      "shape:zu7YTute7kQ9_05u3ytHI": {
+        "x": 588.7162386544007,
+        "y": 1319.7399958330568,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:zu7YTute7kQ9_05u3ytHI",
+        "type": "draw",
+        "props": {
+          "segments": [
+            {
+              "type": "free",
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 0.23,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 2.4,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 7.26,
+                  "y": 0,
+                  "z": 0.5
+                },
+                {
+                  "x": 12.32,
+                  "y": 0.16,
+                  "z": 0.5
+                },
+                {
+                  "x": 19.52,
+                  "y": 2.07,
+                  "z": 0.5
+                },
+                {
+                  "x": 20.87,
+                  "y": 2.61,
+                  "z": 0.5
+                },
+                {
+                  "x": 21.4,
+                  "y": 2.94,
+                  "z": 0.5
+                },
+                {
+                  "x": 21.58,
+                  "y": 3.11,
+                  "z": 0.5
+                },
+                {
+                  "x": 21.57,
+                  "y": 3.39,
+                  "z": 0.5
+                },
+                {
+                  "x": 21.11,
+                  "y": 3.88,
+                  "z": 0.5
+                },
+                {
+                  "x": 19.33,
+                  "y": 4.8,
+                  "z": 0.5
+                },
+                {
+                  "x": 16.54,
+                  "y": 6.1,
+                  "z": 0.5
+                },
+                {
+                  "x": 13.43,
+                  "y": 7.63,
+                  "z": 0.5
+                },
+                {
+                  "x": 10.26,
+                  "y": 9.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 7.62,
+                  "y": 11.38,
+                  "z": 0.5
+                },
+                {
+                  "x": 6.06,
+                  "y": 12.33,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.42,
+                  "y": 12.92,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.15,
+                  "y": 13.33,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 13.6,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 13.82,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 13.98,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 14.24,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 14.65,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 15.05,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 15.47,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 15.93,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.03,
+                  "y": 16.43,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.14,
+                  "y": 17,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.29,
+                  "y": 17.79,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.46,
+                  "y": 18.62,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.6,
+                  "y": 19.21,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.69,
+                  "y": 19.55,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.82,
+                  "y": 19.82,
+                  "z": 0.5
+                },
+                {
+                  "x": 5.95,
+                  "y": 20.03,
+                  "z": 0.5
+                },
+                {
+                  "x": 6.18,
+                  "y": 20.03,
+                  "z": 0.5
+                }
+              ]
+            }
+          ],
+          "color": "blue",
+          "fill": "none",
+          "dash": "draw",
+          "size": "s",
+          "isComplete": true,
+          "isClosed": false,
+          "isPen": false,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aF",
+        "typeName": "shape"
+      },
+      "shape:_1-NWDvE9A11WlbHtH1wc": {
+        "x": 634.9147311917543,
+        "y": 1310.5819386453,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:_1-NWDvE9A11WlbHtH1wc",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 118.1484375,
+          "text": "Path params",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aG",
+        "typeName": "shape"
+      },
+      "shape:8QVDmn9UKNeq-25i1kONs": {
+        "x": 186.42904579663002,
+        "y": 1354.3643450761256,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:8QVDmn9UKNeq-25i1kONs",
+        "type": "code",
+        "props": {
+          "w": 525.4472608386485,
+          "h": 259.2173292151756,
+          "text": "@app.get(\"/student\") # query params\ndef get_student_details(id: int = None, name: str = None):\n  if not id:\n    return None\n  \n  return data\n\n@app.get(\"/student/{id}\") # path params\ndef get_student_by_id(id: int = None):\n  return data",
+          "language": "python",
+          "output": ""
+        },
+        "parentId": "page:page",
+        "index": "aH",
+        "typeName": "shape"
+      },
+      "shape:2Wxs1z6V36Ub9DcqXMTZm": {
+        "x": 200.28848535878024,
+        "y": 1650.7179830129821,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:2Wxs1z6V36Ub9DcqXMTZm",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 556.484375,
+          "text": "step 6: taking data from POST api\nto take data from post api we must have a request schema",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aI",
+        "typeName": "shape"
+      },
+      "shape:TECNiJs3lGfdTojsLmvG7": {
+        "x": 197.8923737952996,
+        "y": 1724.1028463583252,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:TECNiJs3lGfdTojsLmvG7",
+        "type": "code",
+        "props": {
+          "w": 400,
+          "h": 277.93758853674103,
+          "text": "from pydantic import BaseModel\n\nclass StudentCreateReq(BaseModel):\n  name: str\n  roll_no: int\n  age: int\n  course: str\n\n@app.post(\"/student\")\ndef create_student(req: StudentCreateReq):\n  \"\"\"<code to create or save the data>\"\"\"\n  return {\"message\": \"created\"}",
+          "language": "python",
+          "output": ""
+        },
+        "parentId": "page:page",
+        "index": "aJ",
+        "typeName": "shape"
+      }
+    },
+    "schema": {
+      "schemaVersion": 2,
+      "sequences": {
+        "com.tldraw.store": 4,
+        "com.tldraw.asset": 1,
+        "com.tldraw.camera": 1,
+        "com.tldraw.document": 2,
+        "com.tldraw.instance": 25,
+        "com.tldraw.instance_page_state": 5,
+        "com.tldraw.page": 1,
+        "com.tldraw.instance_presence": 5,
+        "com.tldraw.pointer": 1,
+        "com.tldraw.shape": 4,
+        "com.tldraw.asset.bookmark": 2,
+        "com.tldraw.asset.image": 5,
+        "com.tldraw.asset.video": 5,
+        "com.tldraw.shape.group": 0,
+        "com.tldraw.shape.text": 2,
+        "com.tldraw.shape.bookmark": 2,
+        "com.tldraw.shape.draw": 2,
+        "com.tldraw.shape.geo": 9,
+        "com.tldraw.shape.note": 7,
+        "com.tldraw.shape.line": 5,
+        "com.tldraw.shape.frame": 0,
+        "com.tldraw.shape.arrow": 5,
+        "com.tldraw.shape.highlight": 1,
+        "com.tldraw.shape.embed": 4,
+        "com.tldraw.shape.image": 4,
+        "com.tldraw.shape.video": 2,
+        "com.tldraw.shape.code": 0,
+        "com.tldraw.binding.arrow": 0
+      }
+    }
+  },
+  "session": {
+    "version": 0,
+    "currentPageId": "page:page",
+    "exportBackground": true,
+    "isFocusMode": false,
+    "isDebugMode": false,
+    "isToolLocked": false,
+    "isGridMode": false,
+    "pageStates": [
+      {
+        "pageId": "page:page",
+        "camera": {
+          "x": 1219.5817697570114,
+          "y": 139.05406540408404,
+          "z": 0.31082817563949144
+        },
+        "selectedShapeIds": [],
+        "focusedGroupId": null
+      }
+    ]
+  }
+}

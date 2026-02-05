@@ -1,0 +1,15 @@
+**Introduction to FastAPI Get Requests**
+=====================================
+
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It is designed to be fast, scalable, and easy to use.
+
+### **Getting Started**
+
+To start with FastAPI, you need to install it using pip:
+```bash\npip install fastapi uvicorn
+```
+**Basic Get Request**
+--------------------
+
+A basic Get request in FastAPI can be created using the `@app.get()` decorator. Here is an example:
+```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\nasync def read_root():\n    return {\"message\": \"Hello, World!\"}\n```\nIn this example, we create a FastAPI application and define a route for the root URL (`\"/\"`) using the `@app.get()` decorator. The `read_root` function returns a dictionary with a message.\n\n**Path Parameters**\n------------------\n\nYou can add path parameters to your Get request using the `{}` syntax. Here is an example:\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    return {\"item_id\": item_id}\n```\nIn this example, we define a route for the `/items/{item_id}` URL, where `item_id` is a path parameter. The `read_item` function returns a dictionary with the `item_id`.\n\n**Query Parameters**\n-------------------\n\nYou can add query parameters to your Get request using the `?` syntax. Here is an example:\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/items/\")\nasync def read_items(page: int = 1, size: int = 10):\n    return {\"page\": page, \"size\": size}\n```\nIn this example, we define a route for the `/items/` URL, where `page` and `size` are query parameters. The `read_items` function returns a dictionary with the `page` and `size`.\n\n### **Running the Application**\n\nTo run the application, you can use the `uvicorn` command:\n```bash\nuvicorn main:app --host 0.0.0.0 --port 8000\n```\nReplace `main` with the name of your Python file.\n\n### **Testing the Application**\n\nYou can test the application using a tool like `curl` or a web browser. For example, to test the `/` route, you can use the following command:\n```bash\ncurl http://localhost:8000/\n```\nThis should return the `{\"message\": \"Hello, World!\"}` response.\n\n### **Example Use Cases**\n\n* Create a RESTful API for a blog, where each blog post is identified by a unique `id`.\n* Create a API for a e-commerce website, where each product is identified by a unique `id`.\n* Create a API for a social media platform, where each user is identified by a unique `id`.\n\n### **Best Practices**\n\n* Use meaningful route names and path parameters.\n* Use query parameters for filtering and sorting data.\n* Use path parameters for identifying unique resources.\n* Use async/await for handling concurrent requests.\n* Use type hints for documenting the API and for static type checking.\n\nNote: This is a basic introduction to FastAPI Get requests. For more information, you can refer to the [FastAPI documentation](https://fastapi.tiangolo.com/).
