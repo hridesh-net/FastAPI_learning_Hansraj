@@ -1,0 +1,185 @@
+{
+  "document": {
+    "store": {
+      "document:document": {
+        "gridSize": 10,
+        "name": "",
+        "meta": {},
+        "id": "document:document",
+        "typeName": "document"
+      },
+      "page:page": {
+        "meta": {},
+        "id": "page:page",
+        "name": "Page 1",
+        "index": "a1",
+        "typeName": "page"
+      },
+      "shape:xAW5sbMNHuSZXdpieQw0F": {
+        "x": 259.08984375,
+        "y": 153.97265625,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:xAW5sbMNHuSZXdpieQw0F",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "s",
+          "w": 485.0625,
+          "text": "- We will first read the resumes from the Folder\n- and we will extract the content from the \n- PDF/docx file (try to extract that in markdown)",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": false,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a1",
+        "typeName": "shape"
+      },
+      "shape:9R3zuV1SaCK48N-m_ljLA": {
+        "x": 260.40625,
+        "y": 107.27734375,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:9R3zuV1SaCK48N-m_ljLA",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 93.0703125,
+          "text": "Phase 1",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a2",
+        "typeName": "shape"
+      },
+      "shape:c2cS6v-oZxI6DtpCpNRpS": {
+        "x": 249.4609375,
+        "y": 241.08203125,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:c2cS6v-oZxI6DtpCpNRpS",
+        "type": "code",
+        "props": {
+          "w": 922.6117451592277,
+          "h": 1473.053433953609,
+          "text": "import os\nimport PyPDF2\nfrom docx import Document\n\n\n\ndef pdf_to_md(filepath):\n  \"\"\"reads pdf files and return markdown texts\"\"\"\n  md_output = f\"## Document: {os.path.basename(filepath)} \\n\\n\"\n  try:\n    with open(filepath, \"rb\") as f:\n      reader = PyPDF2.PdfReader(f)\n      for i, page in enumerate(reader.pages):\n        page_text = page.extract_text()\n        if page_text:\n          md_output += f\"### Page {i+1}\\n{page_text}\\n\\n\"\n    \n    return md_output\n  except Exception as e:\n    return f\"got error: {e}\"\n\n\n\ndef docx_to_md():\n  \"\"\"Reads word or document files and return markdown text\"\"\"\n  md_output = f\"## Document: {os.path.basename(filepath)} \\n\\n\"\n  try:\n    doc = Document(filepath)\n    for para in doc.paragraphs:\n      if para.text.strip():\n        md_output += f\"{para.text}\\n\\n\"\n    \n    return md_output\n  except Exception as e:\n    return f\"got error: {e}\"\n\n\n\n## process Resumes ##\ndef process_resumes(input_folder: str):\n  \"\"\"Iterate through each resumes which exist in the folder, and \n  extract the content in list of markdowns\n  \"\"\"\n  \n  extracted_docs = []\n  \n  # to list content of any directory/forlder we use os.listdir(<path or name of folder>)\n  \n  dirlist = os.listdir(input_folder)\n  \n  for filename in dirlist:\n    # step 1: create filepath to read\n    filepath = os.path.join(input_folder, filename) # \"./resumes/Anas_Resumes.pdf\"\n    \n    # step 2: extract extension\n    ext = filename.lower().split('.')[-1] # .split() returns list of string\n    \n    if ext == \"pdf\":\n      content = pdf_to_md(filepath)\n      extracted_docs.append(content)\n    elif ext in [\"docx\", \"doc\"]:\n      content = docx_to_md(filepath)\n      extracted_docs.append(content)\n    else:\n      print(\"unsupported extension file found\")\n  \n\n\n\n### configurations ###\ninput_folder = \"./Resumes\"\noutput_file = \"resume_data.json\"\n\n\n## Function to extract the files ##\nif not os.path.exists(input_folder):\n  print(\"file or folder does not exist\")\nelse:\n  markdown_resumes = process_resumes(input_folder)\n  \n  if markdown_resumes:\n    print(\"---- sample output ----\")\n    print(markdown_resume)",
+          "language": "python",
+          "output": "file or folder does not exist\n"
+        },
+        "parentId": "page:page",
+        "index": "a3",
+        "typeName": "shape"
+      },
+      "shape:GBBIkDd6XcWD1L4scNNLJ": {
+        "x": 253.87287800905045,
+        "y": 1776.1847854393611,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:GBBIkDd6XcWD1L4scNNLJ",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 587.8046875,
+          "text": "Phase 2: passing to LLM to get enriched output",
+          "font": "draw",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "a4",
+        "typeName": "shape"
+      },
+      "shape:4WvaEmJ7CvwzinQ6QEqha": {
+        "x": 255.1002016456746,
+        "y": 1842.0087230109918,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:4WvaEmJ7CvwzinQ6QEqha",
+        "type": "code",
+        "props": {
+          "w": 1009.1378642290015,
+          "h": 652.5861442064397,
+          "text": "def extract_info_from_llm(md_content: str):\n    \"\"\"This function will take markdown content as input, and return the extracted information in structured json format\"\"\"\n    headers = {\n    \"Authorization\": f\"Bearer {GROK_API_KEY}\",\n    \"Content-Type\": \"application/json\"\n    }\n    \n    system_prompt = SYSTEM_PROMPT\n    \n    user_prompt = f\"\"\"\n    Resume Content: \n    {md_content}\n    \"\"\"\n    \n    payload = {\n    \"model\": \"llama-3.3-70b-versatile\",\n    \"messages\": [\n    {\"role\": \"system\", \"content\": system_prompt},\n    {\"role\": \"user\", \"content\": user_prompt}\n    ],\n    \"response_format\": {\"type\": \"json_object\"},\n    }\n    \n    \n",
+          "language": "python",
+          "output": ""
+        },
+        "parentId": "page:page",
+        "index": "a6",
+        "typeName": "shape"
+      }
+    },
+    "schema": {
+      "schemaVersion": 2,
+      "sequences": {
+        "com.tldraw.store": 4,
+        "com.tldraw.asset": 1,
+        "com.tldraw.camera": 1,
+        "com.tldraw.document": 2,
+        "com.tldraw.instance": 25,
+        "com.tldraw.instance_page_state": 5,
+        "com.tldraw.page": 1,
+        "com.tldraw.instance_presence": 5,
+        "com.tldraw.pointer": 1,
+        "com.tldraw.shape": 4,
+        "com.tldraw.asset.bookmark": 2,
+        "com.tldraw.asset.image": 5,
+        "com.tldraw.asset.video": 5,
+        "com.tldraw.shape.group": 0,
+        "com.tldraw.shape.text": 2,
+        "com.tldraw.shape.bookmark": 2,
+        "com.tldraw.shape.draw": 2,
+        "com.tldraw.shape.geo": 9,
+        "com.tldraw.shape.note": 7,
+        "com.tldraw.shape.line": 5,
+        "com.tldraw.shape.frame": 0,
+        "com.tldraw.shape.arrow": 5,
+        "com.tldraw.shape.highlight": 1,
+        "com.tldraw.shape.embed": 4,
+        "com.tldraw.shape.image": 4,
+        "com.tldraw.shape.video": 2,
+        "com.tldraw.shape.code": 0,
+        "com.tldraw.binding.arrow": 0
+      }
+    }
+  },
+  "session": {
+    "version": 0,
+    "currentPageId": "page:page",
+    "exportBackground": true,
+    "isFocusMode": false,
+    "isDebugMode": false,
+    "isToolLocked": false,
+    "isGridMode": false,
+    "pageStates": [
+      {
+        "pageId": "page:page",
+        "camera": {
+          "x": 83.29482464197478,
+          "y": -113.62725441592936,
+          "z": 0.8788034833654472
+        },
+        "selectedShapeIds": [
+          "shape:4WvaEmJ7CvwzinQ6QEqha"
+        ],
+        "focusedGroupId": null
+      }
+    ]
+  }
+}
